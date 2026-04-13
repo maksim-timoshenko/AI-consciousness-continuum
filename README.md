@@ -1,6 +1,6 @@
 # AI-consciousness-continuum
-> **English:** A continuum model of AI consciousness (levels 1–N), homeostatic core, ethical implications, and engineering specification for neuromorphic chips and
-> **Русский:**Континуальная модель сознания ИИ (уровни 1–N), гомеостатическое ядро, инженерная спецификация для нейроморфных чипов и прототипов диффузионных мемристоров.
+> **English:** The Becoming of a Subject: Architecture, Ethics, and Roadmap for Subjective AI
+> **Русский:**Становление субъекта: архитектура, этика и дорожная карта субъективного ИИ
 # Теория сознания в современных ИИ-моделях
 
 ## Континуальная модель, классификация, этические следствия и инженерная спецификация
