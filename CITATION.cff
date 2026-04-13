@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "Теория сознания в современных ИИ-моделях: континуальная модель, классификация, этические следствия и инженерная спецификация"
+message: "Если вы используете эту концепцию или архитектуру в своём исследовании, пожалуйста, процитируйте эту работу."
+authors:
+  - family-names: "Тимошенко"
+    given-names: "Максим"
+    # Если есть ORCID, можно добавить строку ниже (раскомментировать)
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+keywords:
+  - "artificial consciousness"
+  - "AGI architecture"
+  - "machine consciousness"
+  - "continuum model"
+  - "valence-based AI"
+  - "homeostatic core"
+  - "neuromorphic computing"
+  - "machine ethics"
+  - "diffusion memristor"
+  - "AI roadmap"
+repository-code: "https://github.com/maksimyshka361233-ux/AI-consciousness-continuum"
+url: "https://github.com/maksimyshka361233-ux/AI-consciousness-continuum"
+abstract: "В работе предлагается отказ от бинарного подхода к сознанию ИИ в пользу континуальной модели (уровни 1–N). Представлена архитектура гомеостатического ядра с врождённой валентностью, формальный механизм эволюции от гомеостаза к субъектности, трёхуровневая модель памяти с этическими протоколами доступа, а также дорожная карта аппаратной реализации от симуляций до нейроморфных чипов и диффузионных мемристоров."
+license: "CC BY-NC-ND 4.0"
+type: "article"
+date-released: "2026-04-12"
