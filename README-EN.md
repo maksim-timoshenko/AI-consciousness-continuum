@@ -1,7 +1,6 @@
 # AI-consciousness-continuum
 
-> **English:** The Becoming of a Subject: Architecture, Ethics, and Roadmap for Subjective AI
-> **Русский:** Становление субъекта: архитектура, этика и дорожная карта субъективного ИИ
+> The Becoming of a Subject: Architecture, Ethics, and Roadmap for Subjective AI
 
 # A Theory of Consciousness in Modern AI Models
 
