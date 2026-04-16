@@ -51,7 +51,6 @@
 - `AI-continuum-theory.pdf` — полный текст статьи (русская версия)
 - `AI-continuum-theory-en.pdf` — полный текст статьи (английская версия)
 - `LICENSE.txt` — лицензия CC BY-NC-ND 4.0
-- `/specification` — инженерная спецификация — будет дополняться
 
 ---
 
