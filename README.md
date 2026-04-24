@@ -65,9 +65,9 @@
 ## Структура репозитория
 
 - `README.md` — этот файл
-- `AI-continuum-theory.pdf` — полный текст статьи (русская версия)
+- `AI-continuum-theory.pdf` — полный текст статьи
 - `AI-continuum-theory-en.pdf` — полный текст статьи (английская версия)
-- `Functional-Brain-Architecture-Three-Motivational-Circuits.pdf` — биологическая архитектура
+- `Functional-Brain-Architecture-Three-Motivational-Circuits.pdf` — биологическая архитектура как основа 
 - `Трехконтурная система обучения.pdf` — статья «Трёхконтурная система обучения моделей» 
 - `LICENSE.txt` — лицензия CC BY-NC-ND 4.0
 
