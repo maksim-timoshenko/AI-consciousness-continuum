@@ -68,7 +68,7 @@
 - `AI-continuum-theory.pdf` — полный текст статьи (русская версия)
 - `AI-continuum-theory-en.pdf` — полный текст статьи (английская версия)
 - `Functional-Brain-Architecture-Three-Motivational-Circuits.pdf` — биологическая архитектура
-- `Three-Circuit-Learning-System.pdf` — статья «Трёхконтурная система обучения моделей» 
+- `Трехконтурная система обучения.pdf` — статья «Трёхконтурная система обучения моделей» 
 - `LICENSE.txt` — лицензия CC BY-NC-ND 4.0
 
 ---
