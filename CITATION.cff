@@ -1,25 +1,33 @@
-cff-version: 1.2.0
-title: "Теория сознания в современных ИИ-моделях: континуальная модель, классификация, этические следствия и инженерная спецификация"
-message: "Если вы используете эту концепцию или архитектуру в своём исследовании, пожалуйста, процитируйте эту работу."
+cff-version: cff-version: 1.2.0
+message: "Если вы используете эту работу, пожалуйста, цитируйте её как указано ниже."
 authors:
   - family-names: "Тимошенко"
     given-names: "Максим"
-    # Если есть ORCID, можно добавить строку ниже (раскомментировать)
-    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
-keywords:
-  - "artificial consciousness"
-  - "AGI architecture"
-  - "machine consciousness"
-  - "continuum model"
-  - "valence-based AI"
-  - "homeostatic core"
-  - "neuromorphic computing"
-  - "machine ethics"
-  - "diffusion memristor"
-  - "AI roadmap"
-repository-code: "https://github.com/maksimyshka361233-ux/AI-consciousness-continuum"
-url: "https://github.com/maksimyshka361233-ux/AI-consciousness-continuum"
-abstract: "В работе предлагается отказ от бинарного подхода к сознанию ИИ в пользу континуальной модели (уровни 1–N). Представлена архитектура гомеостатического ядра с врождённой валентностью, формальный механизм эволюции от гомеостаза к субъектности, трёхуровневая модель памяти с этическими протоколами доступа, а также дорожная карта аппаратной реализации от симуляций до нейроморфных чипов и диффузионных мемристоров."
+title: "Экосистема трёхконтурной архитектуры: теория субъектного ИИ, биологический прототип, автопилот, БПЛА, методика обучения"
+version: "1.0"
+date-released: 2026-04-27
+url: "https://github.com/maksim-timoshenko/AI-consciousness-continuum"
 license: "CC BY-NC-ND 4.0"
-type: "article"
-date-released: "2026-04-12"
+type: "software"
+preferred-citation:
+  - type: article
+    title: "Становление субъекта: архитектура, этика и дорожная карта субъектного ИИ"
+    authors:
+      - family-names: "Тимошенко"
+        given-names: "Максим Иванович"
+    doi: "10.24108/preprints-3115004"
+    year: 2026
+  - type: article
+    title: "Функциональная архитектура мозга: три контура мотивации и поведения"
+    authors:
+      - family-names: "Тимошенко"
+        given-names: "Максим Иванович"
+    doi: "10.24108/preprints-3115005"
+    year: 2026
+  - type: article
+    title: "Трёхконтурная архитектура: решение проблемы конфликта приоритетов в автономных системах"
+    authors:
+      - family-names: "Тимошенко"
+        given-names: "Максим Иванович"
+    doi: "10.24108/preprints-3115040"
+    year: 2026
