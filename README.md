@@ -109,7 +109,7 @@
 - `Three-Circuit-Learning.pdf` — книга «Трёхконтурная система обучения моделей»
 - `Three-Circuit-Training-Method.pdf` - книга «Методика раздельного обучения трёхконтурной архитектуры»
 - `Three-Circuit-Autopilot.pdf` — техническое предложение «Трёхконтурный автопилот»
-- `Theory-of-Everything.pdf` - Архитектурная гипотеза коллапса волновой функции и циклическая космология (черновик, 2026)
+- `Architectural-Theory-of-Reality-From-Quantum-Collapse-to-Cyclic-Cosmology.pdf` - Архитектурная теория реальности: от квантового коллапса до циклической космологии
 - `LICENSE.txt` — лицензия CC BY-NC-ND 4.0
 
 ---
