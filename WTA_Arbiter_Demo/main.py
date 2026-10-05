@@ -60,7 +60,6 @@ log_text.tag_config("interrupt", foreground="red", font=("Arial", 10, "bold"))
 log_text.tag_config("winner", foreground="blue", font=("Arial", 10, "bold"))
 log_text.tag_config("normal", foreground="black")
 log_text.tag_config("hysteresis", foreground="#888888")
-log_text.tag_config("modulation", foreground="#aa6600", font=("Arial", 10, "bold"))
 
 arbiter = Arbiter()
 
@@ -97,7 +96,13 @@ def update():
     else:
         log_text.insert(tk.END, "События: нет\n", "normal")
 
-    log_text.insert(tk.END, f"V_h: {priorities_dict['V_h']}  V_e: {priorities_dict['V_e']}  V_s: {priorities_dict['V_s']}\n", "normal")
+    log_text.insert(
+        tk.END,
+        f"V_h: {priorities_dict['V_h']}  "
+        f"V_e: {priorities_dict['V_e']}  "
+        f"V_s: {priorities_dict['V_s']}\n",
+        "normal",
+    )
     log_text.insert(tk.END, f"ПОБЕДИЛ: {winner_name}\n", "winner")
 
     if top_event:
@@ -109,8 +114,6 @@ def update():
     if note:
         if "ПРЕРЫВАНИЕ" in note:
             log_text.insert(tk.END, f"⚠ {note}\n", "interrupt")
-        elif "Модуляция" in note:
-            log_text.insert(tk.END, f"⚡ {note}\n", "modulation")
         elif "Гистерезис" in note:
             log_text.insert(tk.END, f"ℹ {note}\n", "hysteresis")
         else:
