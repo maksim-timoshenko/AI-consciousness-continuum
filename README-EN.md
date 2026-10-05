@@ -182,7 +182,3 @@ I invite everyone interested in this direction. Together we can turn a hypothesi
 
 *"There is no recipe for a ready-made AI here. What is described here is a direction, so that we may step in the right direction."*
 Pull Requests — for those who want to add code, simulations, or improvements
-
-I invite everyone interested in this direction. Together we can turn a hypothesis into a working prototype.
-
-"There is no recipe for a ready-made AI here. What is described here is a direction, so that we may step in the right direction."
