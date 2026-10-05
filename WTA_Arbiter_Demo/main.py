@@ -2,6 +2,7 @@ import tkinter as tk
 import numpy as np
 from arbiter import Arbiter
 
+# Матрица вкладов событий в контуры
 weights = np.array([
     [100, 0,   0],   # Пешеход → V_h
     [90,  0,   0],   # Перегрев → V_h
@@ -34,6 +35,7 @@ event_actions = {
     "Водитель тормоз": "Торможение.",
 }
 
+# --- GUI ---
 window = tk.Tk()
 window.title("Нейроарбитр — трёхконтурная архитектура")
 window.geometry("750x700")
@@ -62,6 +64,7 @@ log_text.tag_config("modulation", foreground="#aa6600", font=("Arial", 10, "bold
 
 arbiter = Arbiter()
 
+
 def update():
     inputs = np.array([1 if v.get() else 0 for v in vars_list])
     contributions = inputs[:, None] * weights
@@ -69,18 +72,15 @@ def update():
     base = np.array([10, 40, 10])
     priorities = np.maximum(base, raw)
 
-    class FakeContour:
-        def __init__(self, name, priority):
-            self.name = name
-            self.current_priority = int(priority)
+    priorities_dict = {
+        "V_h": int(priorities[0]),
+        "V_e": int(priorities[1]),
+        "V_s": int(priorities[2]),
+    }
 
-    vh = FakeContour("V_h", priorities[0])
-    ve = FakeContour("V_e", priorities[1])
-    vs = FakeContour("V_s", priorities[2])
+    winner_name, note = arbiter.decide(priorities_dict)
 
-    winner, note = arbiter.decide([vh, ve, vs])
-
-    winner_idx = {"V_h": 0, "V_e": 1, "V_s": 2}[winner.name]
+    winner_idx = {"V_h": 0, "V_e": 1, "V_s": 2}[winner_name]
     active_indices = [i for i, v in enumerate(vars_list) if v.get()]
     top_event = None
     top_value = -1
@@ -97,8 +97,8 @@ def update():
     else:
         log_text.insert(tk.END, "События: нет\n", "normal")
 
-    log_text.insert(tk.END, f"V_h: {vh.current_priority}  V_e: {ve.current_priority}  V_s: {vs.current_priority}\n", "normal")
-    log_text.insert(tk.END, f"ПОБЕДИЛ: {winner.name}\n", "winner")
+    log_text.insert(tk.END, f"V_h: {priorities_dict['V_h']}  V_e: {priorities_dict['V_e']}  V_s: {priorities_dict['V_s']}\n", "normal")
+    log_text.insert(tk.END, f"ПОБЕДИЛ: {winner_name}\n", "winner")
 
     if top_event:
         log_text.insert(tk.END, f"ГЛАВНОЕ СОБЫТИЕ: {top_event}\n", "normal")
@@ -118,7 +118,7 @@ def update():
     log_text.see(tk.END)
 
 
-def copy_text(event):
+def copy_text():
     try:
         selected = log_text.get("sel.first", "sel.last")
         window.clipboard_clear()
@@ -126,18 +126,22 @@ def copy_text(event):
     except tk.TclError:
         pass
 
+
 menu = tk.Menu(window, tearoff=0)
-menu.add_command(label="Копировать", command=lambda: copy_text(None))
+menu.add_command(label="Копировать", command=copy_text)
+
 
 def show_menu(event):
     menu.tk_popup(event.x_root, event.y_root)
 
+
 log_text.bind("<Button-3>", show_menu)
+
 
 def loop():
     update()
     window.after(3000, loop)
 
+
 loop()
-window.mainloop()
 window.mainloop()
