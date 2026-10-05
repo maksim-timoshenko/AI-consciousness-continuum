@@ -4,6 +4,10 @@ class Arbiter:
         self.critical_vh = critical_vh
         self.current_winner = None
 
+    def reset(self):
+        """Сброс состояния. Нужен для прогона независимых сценариев."""
+        self.current_winner = None
+
     def decide(self, priorities):
         """
         priorities: dict вида {"V_h": 100, "V_e": 70, "V_s": 10}
@@ -24,19 +28,19 @@ class Arbiter:
             self.current_winner = leader
             return leader, None
 
+        # Лидер не меняется — выходим сразу
+        if leader == self.current_winner:
+            return self.current_winner, None
+
         # Проверяем гистерезис
         if priorities[leader] > priorities[self.current_winner] + self.hysteresis:
             self.current_winner = leader
             return leader, None
 
-        # Лидер не меняется
-        if leader == self.current_winner:
-            return self.current_winner, None
-
         # Гистерезис удерживает текущего победителя
         diff = priorities[leader] - priorities[self.current_winner]
         explanation = (
             f"Гистерезис: {leader} не может перехватить управление "
-            f"у {self.current_winner} (разница {diff} меньше {self.hysteresis})"
+            f"у {self.current_winner} (разница {diff} ≤ {self.hysteresis})"
         )
         return self.current_winner, explanation
